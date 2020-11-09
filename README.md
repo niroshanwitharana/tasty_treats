@@ -2,7 +2,7 @@
 
  ## Discription :
 
- The business owner, Terence, wants to capture the information and save it in plain text files on his server. The text files are not very easy to work with, that's why I create a web page for Terence, now he can login to the web site and see all the Inquiry infomations sorted by date. customers(users) doesn't have to login to make an inquiry. but customers can register with the business(near future registered customers will be able to place an online orders).
+ The business owner, Terence, wants to capture the information and save it in plain text files on his server. The text files are not very easy to work with, that's why I create a website(MVP-MERN stack) for Terence , now he can login to the web site and see all the Inquiry infomations sorted by date. customers(users) doesn't have to login to make an inquiry. but customers can register with the business(near future registered customers will be able to place an online orders).
 
  if any customer wants to register then they should choose there Role as a "user",
  if anyone want to register as a Administrator they should choose there Role as a "admin",
