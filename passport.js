@@ -2,6 +2,7 @@ const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
 const JwtStrategy = require("passport-jwt").Strategy;
 const User = require("./models/User");
+require('dotenv').config();
 
 // this is a custom function we use for to extract the jwt-token from the request
 const cookieExtrator = (req) => {
@@ -19,7 +20,7 @@ passport.use(
     {
       jwtFromRequest: cookieExtrator,
       //this key will verify is this token is legilimen
-      secretOrKey: "tastyTreats",
+      secretOrKey: process.env.SECRET_OR_KEY,
     },
     (payload, done) => {
       User.findById({ _id: payload.sub }, (err, user) => {

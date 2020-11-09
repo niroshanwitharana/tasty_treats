@@ -3,20 +3,23 @@ const userRouter = express.Router();
 const passport = require('passport');
 const passportConfig = require('../passport');
 const JWT = require ('jsonwebtoken');
+require('dotenv').config();
 const User = require('../models/User');
 const Inquiry = require('../models/Inquiry')
 
 // userID is primary key
 const signToken = userID => {
 // will return actual JWT token
-// we can send any data inside payload but not info like credict cards
+// we can send any data inside payload but not sensitive data like credict cards
     return JWT.sign({
 // who issue this JWT token
-        iss: "tastyTreatsApp",
+        iss: process.env.JWT_ISSUE,
 // who is this token for
         sub: userID
 // this risk manager must be same as secretOrKey
-    }, "tastyTreats", {expiresIn: "5hr"});
+    }, 
+    process.env.SECRET_OR_KEY, 
+    {expiresIn: "5hr"});
 }
 
 userRouter.post('/register', (req, res) => {
