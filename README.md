@@ -13,7 +13,7 @@
 
 ## Installation :
 
-Download the github repo and open the first tirminal for tasty_treats folder, run "npm i" in the terminal and then run "npm run Dev" to start the nodemon for backend. open the second terminal with client folder and run "npm start" to open the react app on the browser.
+Download the github repo and open the first tirminal for tasty_treats folder, run "npm install" in the terminal and then run "npm run Dev" to start the nodemon for backend. open the second terminal with client folder, run "npm install" and then run "npm start" to open the react app on the browser.
 
 ## Usage : 
 
