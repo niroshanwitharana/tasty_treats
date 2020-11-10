@@ -20,10 +20,19 @@ mongoose.connect(
     console.log("successfully connected to database");
   }
 );
-
 // Specify API routes
 const userRouter = require("./routes/User");
 app.use("/user", userRouter);
+
+// Serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (request, response) => {
+    response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 // Start the express server
 app.listen(PORT, () => {
