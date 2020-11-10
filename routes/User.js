@@ -16,7 +16,6 @@ const signToken = userID => {
         iss: process.env.JWT_ISSUE,
 // who is this token for
         sub: userID
-// this risk manager must be same as secretOrKey
     }, 
     process.env.SECRET_OR_KEY, 
     {expiresIn: "5hr"});
