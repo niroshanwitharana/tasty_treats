@@ -20,7 +20,6 @@ mongoose.connect(
     console.log("successfully connected to database");
   }
 );
-
 // Specify API routes
 const userRouter = require("./routes/User");
 app.use("/user", userRouter);
