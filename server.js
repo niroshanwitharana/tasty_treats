@@ -33,7 +33,6 @@ if (process.env.NODE_ENV === "production") {
     response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-
 // Start the express server
 app.listen(PORT, () => {
   console.log("express server started");
